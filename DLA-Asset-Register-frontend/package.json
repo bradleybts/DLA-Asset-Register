@@ -11,10 +11,10 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
+    "bootstrap": "^5.3.7",
     "express": "^5.1.0",
+    "node-schedule": "^2.1.1",
+    "nodemailer": "^7.0.5",
     "sqlite3": "^5.1.7"
-  },
-  "devDependencies": {
-    "tailwindcss": "^4.1.12"
   }
 }
