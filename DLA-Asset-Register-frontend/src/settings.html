@@ -22,15 +22,15 @@
               <div class="size-4">
                 <img src="images/logo-1536x922.webp" alt="DLA Assets logo" class="size-4">
               </div>
-              <h2 class="text-[#111418] text-lg font-bold leading-tight tracking-[-0.015em]">DLA Assets</h2>
+              5<h2 class="text-[#111418] text-lg font-bold leading-tight tracking-[-0.015em]">DLA Assets</h2>
             </div>
+          </div>
+          <div class="flex flex-1 justify-end gap-8">
             <div class="flex items-center gap-9">
               <a class="text-[#111418] text-sm font-medium leading-normal" href="index.html">Dashboard</a>
               <a class="text-[#111418] text-sm font-medium leading-normal" href="admin.html">Admin</a>
               <a class="text-[#111418] text-sm font-medium leading-normal" href="reports.html">Reports</a>
             </div>
-          </div>
-          <div class="flex flex-1 justify-end gap-8">
             <label class="flex flex-col min-w-40 !h-10 max-w-64">
               <div class="flex w-full flex-1 items-stretch rounded-lg h-full">
                 <div
@@ -65,19 +65,96 @@
               </div>
             </a>
             <div
+              id="profile-picture-nav"
               class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
               style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBIImWJmmmQHbPF6pm9vI5JszYr6nQR40VwHcMHv6uP5EbGNLMfEJs_r_4Wj2jBE2UGU3MrI5USXFnv0dtZQIx_YxpFsdobA9QcUA9cx89MbE4FY3tVxn41-uv1UDu_E_ui8tynXs2huaYsP-OYzDj_g6qYOedCabiu9CvMhufeaLwsAszB8GHWJo-ZaSXvRRwfDsI5lY-bTeIUrpBcMODWs3twNA1U9Wa6cVAOkUgsWNnW1omAFSUv72WEyLYuMPcTaXtnhlDRww");'
             ></div>
           </div>
         </header>
-        <div class="px-40 flex flex-1 justify-center py-5">
-          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
-            <div class="flex flex-wrap justify-between gap-3 p-4">
-              <p class="text-[#111418] tracking-light text-[32px] font-bold leading-tight min-w-72">Settings</p>
-            </div>
-          </div>
+        <div class="flex flex-1">
+          <aside class="w-64 bg-[#111418] p-10">
+            <nav class="flex flex-col gap-4">
+              <a href="#profile" class="text-lg font-medium text-white hover:text-blue-200">Profile</a>
+              <a href="#preferences" class="text-lg font-medium text-white hover:text-blue-200">Preferences</a>
+              <a href="#license" class="text-lg font-medium text-white hover:text-blue-200">License</a>
+              <a href="#system-version" class="text-lg font-medium text-white hover:text-blue-200">System Version</a>
+              <a href="#documentation" class="text-lg font-medium text-white hover:text-blue-200">Documentation</a>
+              <a href="#about" class="text-lg font-medium text-white hover:text-blue-200">About</a>
+            </nav>
+          </aside>
+          <main class="flex-1 p-10">
+            <h1 class="text-3xl font-bold mb-10">Settings</h1>
+            <section id="profile" class="mb-10">
+              <h2 id="profile-information" class="text-2xl font-bold mb-4">Profile Information</h2>
+              <div class="grid grid-cols-2 gap-4">
+                <div>
+                  <label for="username" class="block text-sm font-medium text-gray-700">Username</label>
+                  <input type="text" name="username" id="username" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" value="johndoe">
+                </div>
+                <div>
+                  <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                  <input type="email" name="email" id="email" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" value="john.doe@example.com" disabled>
+                </div>
+                <div class="col-span-2">
+                  <label for="profile-picture" class="block text-sm font-medium text-gray-700">Profile Picture</label>
+                  <div class="mt-1 flex items-center">
+                    <span class="inline-block h-12 w-12 rounded-full overflow-hidden bg-gray-100">
+                      <svg class="h-full w-full text-gray-300" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M24 20.993V24H0v-2.997A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z" />
+                      </svg>
+                    </span>
+                    <input type="file" name="profile-picture" id="profile-picture" class="ml-5 bg-white py-2 px-3 border border-gray-300 rounded-md shadow-sm text-sm leading-4 font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                  </div>
+                </div>
+                <div class="col-span-2">
+                  <label for="password" class="block text-sm font-medium text-gray-700">New Password</label>
+                  <input type="password" name="password" id="password" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                </div>
+                <div class="col-span-2">
+                  <label for="confirm-password" class="block text-sm font-medium text-gray-700">Confirm New Password</label>
+                  <input type="password" name="confirm-password" id="confirm-password" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                </div>
+                <div class="col-span-2">
+                  <label for="access-level" class="block text-sm font-medium text-gray-700">Access Level</label>
+                  <p id="access-level" class="mt-1 text-sm text-gray-500">Administrator</p>
+                </div>
+              </div>
+              <button class="mt-4 px-4 py-2 bg-blue-500 text-white rounded-md">Save Changes</button>
+            </section>
+            <section id="preferences" class="mb-10">
+              <h2 class="text-2xl font-bold mb-4">Preferences</h2>
+              <div class="grid grid-cols-2 gap-4">
+                <div>
+                  <label for="language" class="block text-sm font-medium text-gray-700">Language</label>
+                  <select id="language" name="language" class="mt-1 block w-full rounded-md border-gray-300 py-2 pl-3 pr-10 text-base focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm">
+                    <option>English</option>
+                    <option selected>Spanish</option>
+                    <option>French</option>
+                  </select>
+                </div>
+                
+              </div>
+            </section>
+            <section id="license" class="mb-10">
+              <h2 class="text-2xl font-bold mb-4">License Information</h2>
+              <p>MIT License</p>
+            </section>
+            <section id="system-version" class="mb-10">
+              <h2 class="text-2xl font-bold mb-4">System Version</h2>
+              <p>1.0.0</p>
+            </section>
+            <section id="documentation" class="mb-10">
+              <h2 class="text-2xl font-bold mb-4">Documentation</h2>
+              <a href="#" class="text-blue-500">View Documentation</a>
+            </section>
+            <section id="about" class="mb-10">
+              <h2 class="text-2xl font-bold mb-4">About</h2>
+              <p>DLA Asset Register is a tool to manage assets.</p>
+            </section>
+          </main>
         </div>
       </div>
     </div>
+    <script src="js/profile.js"></script>
   </body>
 </html>

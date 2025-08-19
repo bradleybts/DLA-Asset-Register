@@ -14,6 +14,7 @@
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   </head>
   <body>
+  
     <div
       class="relative flex size-full min-h-screen flex-col bg-white group/design-root overflow-x-hidden"
       style="--select-button-svg: url('data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2724px%27 height=%2724px%27 fill=%27rgb(96,117,138)%27 viewBox=%270 0 256 256%27%3e%3cpath d=%27M181.66,170.34a8,8,0,0,1,0,11.32l-48,48a8,8,0,0,1-11.32,0l-48-48a8,8,0,0,1,11.32-11.32L128,212.69l42.34-42.35A8,8,0,0,1,181.66,170.34Zm-96-84.68L128,43.31l42.34,42.35a8,8,0,0,0,11.32-11.32l-48-48a8,8,0,0,0-11.32,0l-48,48A8,8,0,0,0,85.66,85.66Z%27%3e%3c/path%3e%3c/svg%3e'); font-family: Inter, &quot;Noto Sans&quot;, sans-serif;"
@@ -27,13 +28,13 @@
               </div>
               <h2 class="text-[#111418] text-lg font-bold leading-tight tracking-[-0.015em]">DLA Assets</h2>
             </div>
+          </div>
+          <div class="flex flex-1 justify-end gap-8">
             <div class="flex items-center gap-9">
               <a class="text-[#111418] text-sm font-medium leading-normal" href="index.html">Dashboard</a>
               <a class="text-[#111418] text-sm font-medium leading-normal" href="assets.html">Assets</a>
               <a class="text-[#111418] text-sm font-medium leading-normal" href="reports.html">Reports</a>
             </div>
-          </div>
-          <div class="flex flex-1 justify-end gap-8">
             <label class="flex flex-col min-w-40 !h-10 max-w-64">
               <div class="flex w-full flex-1 items-stretch rounded-lg h-full">
                 <div
@@ -84,13 +85,64 @@
                 <div class="flex flex-col gap-2">
                   <a href="admin.html" class="flex items-center gap-3 px-3 py-2 rounded-lg bg-[#f0f2f5]"><p class="text-[#111418] text-sm font-medium leading-normal">Rights Management</p></a>
                   <a href="user-management.html" class="flex items-center gap-3 px-3 py-2"><p class="text-[#111418] text-sm font-medium leading-normal">User Management</p></a>
-                  
+                  <a href="user-registration.html" class="flex items-center gap-3 px-3 py-2"><p class="text-[#111418] text-sm font-medium leading-normal">User Registration</p></a>
                 </div>
               </div>
             </div>
           </div>
           <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
-            <div class="flex flex-wrap justify-between gap-3 p-4"><p class="text-[#111418] tracking-light text-[32px] font-bold leading-tight min-w-72">System Rights</p></div>
+            <div class="flex flex-wrap justify-between gap-3 p-4">
+              <p class="text-[#111418] tracking-light text-[32px] font-bold leading-tight min-w-72">System Rights</p>
+            </div>
+            <div class="p-4">
+              <table class="w-full border-collapse">
+                <thead>
+                  <tr class="border-b border-solid border-b-[#f0f2f5]">
+                    <th class="p-4 text-left font-medium text-[#60758a]">User Class</th>
+                    <th class="p-4 text-center font-medium text-[#60758a]">Admin</th>
+                    <th class="p-4 text-center font-medium text-[#60758a]">Assets</th>
+                    <th class="p-4 text-center font-medium text-[#60758a]">Asset Overview</th>
+                    <th class="p-4 text-center font-medium text-[#60758a]">User Management</th>
+                    <th class="p-4 text-center font-medium text-[#60758a]">Reports</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="border-b border-solid border-b-[#f0f2f5]">
+                    <td class="p-4 font-medium text-[#111418]">Admin</td>
+                    <td class="p-4 text-center"><input type="checkbox" checked disabled class="form-checkbox rounded text-[#111418] focus:ring-0"></td>
+                    <td class="p-4 text-center"><input type="checkbox" checked disabled class="form-checkbox rounded text-[#111418] focus:ring-0"></td>
+                    <td class="p-4 text-center"><input type="checkbox" checked disabled class="form-checkbox rounded text-[#111418] focus:ring-0"></td>
+                    <td class="p-4 text-center"><input type="checkbox" checked disabled class="form-checkbox rounded text-[#111418] focus:ring-0"></td>
+                    <td class="p-4 text-center"><input type="checkbox" checked disabled class="form-checkbox rounded text-[#111418] focus:ring-0"></td>
+                  </tr>
+                  <tr class="border-b border-solid border-b-[#f0f2f5]">
+                    <td class="p-4 font-medium text-[#111418]">IT Staff</td>
+
+                    <td class="p-4 text-center"><input type="checkbox" disabled class="form-checkbox rounded text-[#111418] focus:ring-0"></td>
+
+                    <td class="p-4 text-center"><input type="checkbox" checked class="form-checkbox rounded text-[#111418] focus:ring-0"></td>
+                    <td class="p-4 text-center"><input type="checkbox" checked class="form-checkbox rounded text-[#111418] focus:ring-0"></td>
+                    <td class="p-4 text-center"><input type="checkbox" checked class="form-checkbox rounded text-[#111418] focus:ring-0"></td>
+                    <td class="p-4 text-center"><input type="checkbox" checked class="form-checkbox rounded text-[#111418] focus:ring-0"></td>
+                  </tr>
+                  <tr>
+                    <td class="p-4 font-medium text-[#111418]">Basic User</td>
+
+                    <td class="p-4 text-center"><input type="checkbox" disabled class="form-checkbox rounded text-[#111418] focus:ring-0"></td>
+                    <td class="p-4 text-center"><input type="checkbox" checked class="form-checkbox rounded text-[#111418] focus:ring-0"></td>
+                    <td class="p-4 text-center"><input type="checkbox" checked class="form-checkbox rounded text-[#111418] focus:ring-0"></td>
+                    <td class="p-4 text-center"><input type="checkbox" disabled class="form-checkbox rounded text-[#111418] focus:ring-0"></td>
+                    <td class="p-4 text-center"><input type="checkbox" disabled class="form-checkbox rounded text-[#111418] focus:ring-0"></td>
+
+                  </tr>
+                </tbody>
+              </table>
+              <div class="flex justify-end mt-6">
+                <button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-[#111418] text-white gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-5">
+                  Save Changes
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -27,13 +27,13 @@
               </div>
               <h2 class="text-[#111418] text-lg font-bold leading-tight tracking-[-0.015em]">DLA Assets</h2>
             </div>
+          </div>
+          <div class="flex flex-1 justify-end gap-8">
             <div class="flex items-center gap-9">
               <a class="text-[#111418] text-sm font-medium leading-normal" href="index.html">Dashboard</a>
               <a class="text-[#111418] text-sm font-medium leading-normal" href="admin.html">Admin</a>
               <a class="text-[#111418] text-sm font-medium leading-normal" href="reports.html">Reports</a>
             </div>
-          </div>
-          <div class="flex flex-1 justify-end gap-8">
             <label class="flex flex-col min-w-40 !h-10 max-w-64">
               <div class="flex w-full flex-1 items-stretch rounded-lg h-full">
                 <div
@@ -82,9 +82,9 @@
                   <p class="text-[#60758a] text-sm font-normal leading-normal">Manage IT Assets</p>
                 </div>
                 <div class="flex flex-col gap-2">
-                  <div class="flex items-center gap-3 px-3 py-2 rounded-lg bg-[#f0f2f5]"><p class="text-[#111418] text-sm font-medium leading-normal">User Registration</p></div>
-                  <div class="flex items-center gap-3 px-3 py-2"><p class="text-[#111418] text-sm font-medium leading-normal">User Management</p></div>
-                  <div class="flex items-center gap-3 px-3 py-2"><p class="text-[#111418] text-sm font-medium leading-normal">Rights Management</p></div>
+                  <a href="admin.html" class="flex items-center gap-3 px-3 py-2"><p class="text-[#111418] text-sm font-medium leading-normal">Rights Management</p></a>
+                  <a href="user-management.html" class="flex items-center gap-3 px-3 py-2"><p class="text-[#111418] text-sm font-medium leading-normal">User Management</p></a>
+                  <a href="user-registration.html" class="flex items-center gap-3 px-3 py-2 rounded-lg bg-[#f0f2f5]"><p class="text-[#111418] text-sm font-medium leading-normal">User Registration</p></a>
                 </div>
               </div>
             </div>
@@ -123,13 +123,13 @@
             </div>
             <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
               <label class="flex flex-col min-w-40 flex-1">
-                <p class="text-[#111418] text-base font-medium leading-normal pb-2">Role</p>
+                <p class="text-[#111418] text-base font-medium leading-normal pb-2">Access Level</p>
                 <select
                   class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#111418] focus:outline-0 focus:ring-0 border-none bg-[#f0f2f5] focus:border-none h-14 bg-[image:--select-button-svg] placeholder:text-[#60758a] p-4 text-base font-normal leading-normal"
                 >
-                  <option value="one">Select role</option>
-                  <option value="two">two</option>
-                  <option value="three">three</option>
+                  <option value="one">Basic User</option>
+                  <option value="two">IT Staff</option>
+                  <option value="three">Admin</option>
                 </select>
               </label>
             </div>
