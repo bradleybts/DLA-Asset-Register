@@ -49,15 +49,17 @@
           </div>
         </header>
         <div class="px-40 flex flex-1 justify-center py-5">
-          <div class="layout-content-container flex flex-col w-[512px] max-w-[512px] py-5 max-w-[960px] flex-1">
+          <form id="register-asset-form" class="layout-content-container flex flex-col w-[512px] max-w-[512px] py-5 max-w-[960px] flex-1">
             <div class="flex flex-wrap justify-between gap-3 p-4"><p class="text-[#111418] tracking-light text-[32px] font-bold leading-tight min-w-72">Register New Asset</p></div>
             <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
               <label class="flex flex-col min-w-40 flex-1">
                 <p class="text-[#111418] text-base font-medium leading-normal pb-2">Asset Name</p>
                 <input
+                  id="asset_name"
+                  name="asset_name"
                   placeholder="Enter asset name"
                   class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#111418] focus:outline-0 focus:ring-0 border border-[#dbe0e6] bg-white focus:border-[#dbe0e6] h-14 placeholder:text-[#60758a] p-[15px] text-base font-normal leading-normal"
-                  value=""
+                  required
                 />
               </label>
             </div>
@@ -65,9 +67,11 @@
               <label class="flex flex-col min-w-40 flex-1">
                 <p class="text-[#111418] text-base font-medium leading-normal pb-2">Asset Type</p>
                 <input
+                  id="asset_type"
+                  name="asset_type"
                   placeholder="Select asset type"
                   class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#111418] focus:outline-0 focus:ring-0 border border-[#dbe0e6] bg-white focus:border-[#dbe0e6] h-14 placeholder:text-[#60758a] p-[15px] text-base font-normal leading-normal"
-                  value=""
+                  required
                 />
               </label>
             </div>
@@ -75,9 +79,11 @@
               <label class="flex flex-col min-w-40 flex-1">
                 <p class="text-[#111418] text-base font-medium leading-normal pb-2">Serial Number</p>
                 <input
+                  id="serial_number"
+                  name="serial_number"
                   placeholder="Enter serial number"
                   class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#111418] focus:outline-0 focus:ring-0 border border-[#dbe0e6] bg-white focus:border-[#dbe0e6] h-14 placeholder:text-[#60758a] p-[15px] text-base font-normal leading-normal"
-                  value=""
+                  required
                 />
               </label>
             </div>
@@ -85,9 +91,12 @@
               <label class="flex flex-col min-w-40 flex-1">
                 <p class="text-[#111418] text-base font-medium leading-normal pb-2">Purchase Date</p>
                 <input
+                  id="purchase_date"
+                  name="purchase_date"
+                  type="date"
                   placeholder="Select purchase date"
                   class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#111418] focus:outline-0 focus:ring-0 border border-[#dbe0e6] bg-white focus:border-[#dbe0e6] h-14 placeholder:text-[#60758a] p-[15px] text-base font-normal leading-normal"
-                  value=""
+                  required
                 />
               </label>
             </div>
@@ -95,9 +104,10 @@
               <label class="flex flex-col min-w-40 flex-1">
                 <p class="text-[#111418] text-base font-medium leading-normal pb-2">Assigned To</p>
                 <input
-                  placeholder="Select user"
+                  id="assigned_to"
+                  name="assigned_to"
+                  placeholder="Enter user ID"
                   class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#111418] focus:outline-0 focus:ring-0 border border-[#dbe0e6] bg-white focus:border-[#dbe0e6] h-14 placeholder:text-[#60758a] p-[15px] text-base font-normal leading-normal"
-                  value=""
                 />
               </label>
             </div>
@@ -105,6 +115,8 @@
               <label class="flex flex-col min-w-40 flex-1">
                 <p class="text-[#111418] text-base font-medium leading-normal pb-2">Notes</p>
                 <textarea
+                  id="notes"
+                  name="notes"
                   placeholder="Enter any additional notes"
                   class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#111418] focus:outline-0 focus:ring-0 border border-[#dbe0e6] bg-white focus:border-[#dbe0e6] min-h-36 placeholder:text-[#60758a] p-[15px] text-base font-normal leading-normal"
                 ></textarea>
@@ -112,14 +124,16 @@
             </div>
             <div class="flex px-4 py-3 justify-end">
               <button
+                type="submit"
                 class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#0d80f2] text-white text-sm font-bold leading-normal tracking-[0.015em]"
               >
                 <span class="truncate">Register Asset</span>
               </button>
             </div>
-          </div>
+          </form>
         </div>
       </div>
     </div>
+    <script src="js/api.js"></script>
   </body>
 </html>

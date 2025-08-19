@@ -89,15 +89,17 @@
               </div>
             </div>
           </div>
-          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+          <form id="user-registration-form" class="layout-content-container flex flex-col max-w-[960px] flex-1">
             <div class="flex flex-wrap justify-between gap-3 p-4"><p class="text-[#111418] tracking-light text-[32px] font-bold leading-tight min-w-72">User Registration</p></div>
             <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
               <label class="flex flex-col min-w-40 flex-1">
                 <p class="text-[#111418] text-base font-medium leading-normal pb-2">Username</p>
                 <input
+                  id="username"
+                  name="username"
                   placeholder="Enter username"
                   class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#111418] focus:outline-0 focus:ring-0 border-none bg-[#f0f2f5] focus:border-none h-14 placeholder:text-[#60758a] p-4 text-base font-normal leading-normal"
-                  value=""
+                  required
                 />
               </label>
             </div>
@@ -105,9 +107,12 @@
               <label class="flex flex-col min-w-40 flex-1">
                 <p class="text-[#111418] text-base font-medium leading-normal pb-2">Email</p>
                 <input
+                  id="email"
+                  name="email"
+                  type="email"
                   placeholder="Enter email"
                   class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#111418] focus:outline-0 focus:ring-0 border-none bg-[#f0f2f5] focus:border-none h-14 placeholder:text-[#60758a] p-4 text-base font-normal leading-normal"
-                  value=""
+                  required
                 />
               </label>
             </div>
@@ -115,9 +120,12 @@
               <label class="flex flex-col min-w-40 flex-1">
                 <p class="text-[#111418] text-base font-medium leading-normal pb-2">Password</p>
                 <input
+                  id="password"
+                  name="password"
+                  type="password"
                   placeholder="Enter password"
                   class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#111418] focus:outline-0 focus:ring-0 border-none bg-[#f0f2f5] focus:border-none h-14 placeholder:text-[#60758a] p-4 text-base font-normal leading-normal"
-                  value=""
+                  required
                 />
               </label>
             </div>
@@ -125,24 +133,29 @@
               <label class="flex flex-col min-w-40 flex-1">
                 <p class="text-[#111418] text-base font-medium leading-normal pb-2">Access Level</p>
                 <select
+                  id="access_level"
+                  name="access_level"
                   class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#111418] focus:outline-0 focus:ring-0 border-none bg-[#f0f2f5] focus:border-none h-14 bg-[image:--select-button-svg] placeholder:text-[#60758a] p-4 text-base font-normal leading-normal"
+                  required
                 >
-                  <option value="one">Basic User</option>
-                  <option value="two">IT Staff</option>
-                  <option value="three">Admin</option>
+                  <option value="1">Basic User</option>
+                  <option value="2">IT Staff</option>
+                  <option value="3">Admin</option>
                 </select>
               </label>
             </div>
             <div class="flex px-4 py-3 justify-end">
               <button
+                type="submit"
                 class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#0d80f2] text-white text-sm font-bold leading-normal tracking-[0.015em]"
               >
                 <span class="truncate">Register User</span>
               </button>
             </div>
-          </div>
+          </form>
         </div>
       </div>
     </div>
+    <script src="js/api.js"></script>
   </body>
 </html>
